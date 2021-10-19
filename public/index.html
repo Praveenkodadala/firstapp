@@ -1,91 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>entrepreneurship program form</title>
+    <link rel="stylesheet" href="style.css">
 
-        * {
-            box-sizing: border-box;
-        }
-
-        input[type=text],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-
-        input[type=submit] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-            background-color: #45a049;
-        }
-
-        .container {
-            border-radius: 5px;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-    </style>
 </head>
 
 <body>
-
-    <h3>Contact Form</h3>
-
-    <div class="container">
-        <form action="/addaction"  method="post" >
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-            </select>
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-            <button type="submit">Submit</button>
+    <div class="box">
+        <form action="/addaction"  method="post">
+            <h1 class="main">entrepreneurship program form</h1>
+            <hr>
+            <h2> ***NOTE***</h2>
+            <p>
+                By enrolling in this program one will develop entrepreneurship skills like mention below and many
+                more.... <br>
+                Business management skills ,Communication and active listening skills,Risk-taking skills, Networking
+                skills,
+                Critical thinking skills ,Problem-solving skills , Creative thinking skills,Customer service skills.
+                <br>
+                <b>later we will provide some platforms to earn money </b>
+            </p>
+            <hr>
+            <h6> important fields are marked by *</h6>
+            <div> name*:<input type="text" name="name" id="name" placeholder=" full name" required></div> <br>
+            <div> phone no*: <input type="number" name="pnumber" id="pnumber" placeholder="phone number" required></div>
+            <br>
+            <div> email: <input type="email" name="email" id="email" placeholder="email"></div> <br>
+            <div>
+                state*: <select name="state" id="state" required>
+                    <option value=""> select your state</option>
+                    <option value="andhra pradesh">andhra pradesh</option>
+                    <option value="arunachal pradesh">arunachal pradesh</option>
+                    <option value="assam">assam</option>
+                    <option value="bihar">bihar</option>
+                    <option value="chhattisgarh">chhattisgarh</option>
+                    <option value="goa">goa</option>
+                    <option value="gujarat">gujarat</option>
+                    <option value="haryana">haryana</option>
+                    <option value="himachal pradesh">himachal pradesh</option>
+                    <option value="jharkhand">jharkhand</option>
+                    <option value="karnataka">karnataka</option>
+                    <option value="kerala">kerala</option>
+                    <option value="madhya pradesh">madhya pradesh</option>
+                    <option value="maharashtra">maharashtra</option>
+                    <option value="manipur">manipur</option>
+                    <option value="meghalaya">meghalaya</option>
+                    <option value="mizoram">mizoram</option>
+                    <option value="nagaland">nagaland</option>
+                    <option value="odisha">odisha</option>
+                    <option value="punjab">punjab</option>
+                    <option value="rajasthan">rajasthan</option>
+                    <option value="sikkim">sikkim</option>
+                    <option value="tamil nadu">tamil nadu</option>
+                    <option value="telangana">telegana</option>
+                    <option value="tripura">tripura</option>
+                    <option value="uttar pradesh"> uttar pradesh</option>
+                    <option value="uttarakhand">uttarakhand</option>
+                    <option value="west bengal"> west bengal</option>
+                </select>
+            </div> <br>
+            <div> age*: <input type="number" name="age" id="age" placeholder="your age" required> </div> <br>
+            <div> gender:
+                <input type="radio" name="gender" id="female" value="female">  <label for="female">female</label>
+                <input type="radio" name="gender" id="male" value="male"><label for="male">male</label>
+                <input type="radio" name="gender" id="others" value="others"><label for="others">others</label>
+            </div> <br>
+            <div>
+                qualification: <textarea rows="2" id="qualification" name="qualification" cols="20"> </textarea>
+            </div> <br>
+            <div>
+                parents occupation:<textarea rows="2" id="occupation" name="occupation" cols="20"> </textarea>
+            </div> <br>
+            <div>
+                career goals: <textarea rows="2" id="goals" name="goals" cols="20"> </textarea>
+            </div> <br>
+            <div>
+                your motivation: <textarea rows="2" id="motivation" name="motivation" cols="20"> </textarea>
+            </div> <br>
+            <div>
+                submission date*: <input type="datetime-local" name="date" id="date" value="date" required>
+            </div> <br>
+            <div>
+                photo : <input type="file" name="file" id="file" value="file">
+            </div> <br>
+            <div>
+                reset: <input type="reset" name="reset" id="reset" value="reset">
+            </div> <br>
+            <div>
+                submit: <input type="submit" value="Submit">
+            </div> <br>
         </form>
-
-        <script>
-            function sConsole(event) {
-                event.preventDefault();
-                var fname = document.getElementById("fname").value
-                var lname = document.getElementById("lname").value
-                var country = document.getElementById("country").value
-                var subject = document.getElementById("subject").value
-                console.log(fname);
-                console.log(lname);
-                console.log(country);
-                console.log(subject);
-            }
-        </script>
     </div>
 
+    <div>
+        <p>If you want submitted data, <a href="https://myfirstappfullstack.herokuapp.com/getusers">click here</a>.</p>
+    </div>
 </body>
 
 </html>
