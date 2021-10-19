@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
 var mongoose = require("mongoose");
-const connectDb = require('./connection');
-const dotenv = require('dotenv').config();
+//const connectDb = require('./connection').default;
+ require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 app.use(express.static('public'))
 const path = require('path')
@@ -12,8 +12,16 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
-}));
+}))
 
+
+mongoose.connect(process.env.MONGODB_URI,{useNewUrlParser: true , useUnifiedTopology: true} )
+    const db = mongoose.connection;
+    db.on('error', console.error.bind(console, 'connection error:'));
+    db.once('open', function() {
+      console.log('we are connected')
+    });
+    
 var nameSchema = new mongoose.Schema({
     firstname: String,
     lastname: String,
